@@ -60,6 +60,7 @@ export interface OpponentSubmission {
 
 export interface OpponentActivity {
   userId: string;
+  code?: string;
   codeLength: number;
   language: string;
   timestamp: string;
@@ -234,7 +235,8 @@ function handleMessage(msg: DuelServerMessage, cb: DuelCallbacks): void {
     case 'opponent_code_update':
       cb.onOpponentActivity({
         userId: msg.user_id,
-        codeLength: msg.code_length,
+        code: msg.code,
+        codeLength: msg.code_length ?? (msg.code ? msg.code.length : 0),
         language: msg.language,
         timestamp: msg.timestamp,
       });

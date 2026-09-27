@@ -137,22 +137,23 @@
   transition: width 0.3s ease;
 }
 
-/* Ghost Code Visualizer */
+/* Opponent Code Container */
 .ghostEditorContainer {
   flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   background: #060911;
-  padding: 12px;
-  overflow-y: auto;
+  padding: 8px 12px 12px;
+  overflow: hidden;
 }
 
 .ghostHeader {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-bottom: 14px;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -167,10 +168,32 @@
   margin-left: 6px;
 }
 
+.readOnlyBadge {
+  margin-left: auto;
+  font-family: var(--cm-font-mono);
+  font-size: 8px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(244, 63, 94, 0.12);
+  color: var(--cm-player-red);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  letter-spacing: 0.5px;
+}
+
+/* Live Monaco Editor Wrapper for Opponent Code */
+.monacoWrapper {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  position: relative;
+}
+
 .ghostLines {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding-top: 6px;
 }
 
 .ghostLineRow {
@@ -207,12 +230,12 @@
 
 /* Telemetry Card */
 .telemetryCard {
-  padding: 12px 14px;
+  padding: 10px 14px;
   background: #090D16;
   border-top: 1px solid var(--cm-border);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .telemetryHeader {
@@ -250,7 +273,7 @@
 
 .metricsGrid {
   display: flex;
-  gap: 16px;
+  gap: 20px;
 }
 
 .metricItem {
@@ -260,7 +283,7 @@
 
 .metricVal {
   font-family: var(--cm-font-heading);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
   color: var(--cm-text-light);
   line-height: 1.1;
