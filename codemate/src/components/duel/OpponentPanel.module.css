@@ -1,0 +1,326 @@
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--cm-border);
+  background: var(--cm-surface);
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.borderPulseRed {
+  animation: cm-border-pulse-red 1.2s ease-in-out;
+}
+
+.identityBar {
+  height: 2px;
+  background: linear-gradient(90deg, var(--cm-player-red-deep), var(--cm-player-red));
+  width: 100%;
+}
+
+/* Header */
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background: #090D16;
+  border-bottom: 1px solid var(--cm-border);
+}
+
+.playerTagGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.playerTag {
+  font-family: var(--cm-font-heading);
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--cm-player-red);
+  letter-spacing: 0.8px;
+}
+
+.statusDotGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-left: 8px;
+  border-left: 1px solid var(--cm-border);
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.dotCrimson {
+  background: var(--cm-player-red);
+  box-shadow: 0 0 8px var(--cm-player-red);
+  animation: cm-pulse 1s infinite ease-in-out;
+}
+
+.dotAmber {
+  background: var(--cm-amber);
+  box-shadow: 0 0 8px var(--cm-amber);
+  animation: cm-pulse 0.8s infinite ease-in-out;
+}
+
+.dotIdle {
+  background: var(--cm-muted);
+  opacity: 0.5;
+}
+
+.statusText {
+  font-family: var(--cm-font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--cm-muted);
+}
+
+.langPill {
+  font-family: var(--cm-font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border: 1px solid var(--cm-border);
+  border-radius: 6px;
+  color: var(--cm-muted);
+  text-transform: uppercase;
+}
+
+/* Evaluating Banner */
+.evaluatingBlock {
+  padding: 10px 14px;
+  background: rgba(245, 158, 11, 0.08);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.evaluatingHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--cm-font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--cm-amber);
+}
+
+.evalLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.evalCount {
+  font-family: var(--cm-font-mono);
+  font-weight: 700;
+}
+
+.evalTrack {
+  height: 4px;
+  background: rgba(245, 158, 11, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.evalFill {
+  height: 100%;
+  background: var(--cm-amber);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Ghost Code Visualizer */
+.ghostEditorContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #060911;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+.ghostHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ghostDotRed { width: 8px; height: 8px; border-radius: 50%; background: #F43F5E; }
+.ghostDotYellow { width: 8px; height: 8px; border-radius: 50%; background: #F59E0B; }
+.ghostDotGreen { width: 8px; height: 8px; border-radius: 50%; background: #10B981; }
+
+.ghostFileName {
+  font-family: var(--cm-font-mono);
+  font-size: 10px;
+  color: var(--cm-muted);
+  margin-left: 6px;
+}
+
+.ghostLines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ghostLineRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ghostLineNum {
+  font-family: var(--cm-font-mono);
+  font-size: 10px;
+  color: #334155;
+  width: 16px;
+  text-align: right;
+  user-select: none;
+}
+
+.ghostLineBar {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(244, 63, 94, 0.08);
+  transition: all 0.3s ease;
+}
+
+.ghostLineFilled {
+  background: rgba(244, 63, 94, 0.25);
+}
+
+.ghostLineActive {
+  background: var(--cm-player-red);
+  box-shadow: 0 0 10px var(--cm-player-red-glow);
+  animation: cm-pulse 0.8s infinite ease-in-out;
+}
+
+/* Telemetry Card */
+.telemetryCard {
+  padding: 12px 14px;
+  background: #090D16;
+  border-top: 1px solid var(--cm-border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.telemetryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.telemetryLabel {
+  font-family: var(--cm-font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--cm-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.telemetryLiveBadge {
+  font-family: var(--cm-font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--cm-player-red);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.liveDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--cm-player-red);
+  animation: cm-pulse 1s infinite ease-in-out;
+}
+
+.metricsGrid {
+  display: flex;
+  gap: 16px;
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricVal {
+  font-family: var(--cm-font-heading);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--cm-text-light);
+  line-height: 1.1;
+}
+
+.metricSub {
+  font-family: var(--cm-font-ui);
+  font-size: 10px;
+  color: var(--cm-muted);
+}
+
+.cadenceTrack {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.cadenceFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cm-player-red-deep), var(--cm-player-red));
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+/* Submission Outcome Card */
+.submissionCard {
+  margin: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--cm-border);
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subCardTitle {
+  font-family: var(--cm-font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--cm-muted);
+}
+
+.subCardScore {
+  font-family: var(--cm-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--cm-player-red);
+}
+
+.subCardMessage {
+  font-family: var(--cm-font-mono);
+  font-size: 11px;
+  color: var(--cm-text-light);
+  margin: 0;
+}

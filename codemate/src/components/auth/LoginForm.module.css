@@ -1,0 +1,72 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-family: var(--cm-font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--cm-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--cm-border);
+  border-radius: 8px;
+  background: var(--cm-bg);
+  color: var(--cm-text-light);
+  font-family: var(--cm-font-mono);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.18s ease;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: var(--cm-muted);
+}
+
+.input:focus {
+  border-color: var(--cm-accent);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: var(--cm-border);
+}
+
+.dividerText {
+  font-family: var(--cm-font-mono);
+  font-size: 11px;
+  color: var(--cm-muted);
+  white-space: nowrap;
+}
+
+.oauthRow {
+  display: flex;
+  gap: 10px;
+}
+
+.submitBtn {
+  width: 100%;
+  margin-top: 2px;
+}

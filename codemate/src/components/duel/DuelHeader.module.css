@@ -1,0 +1,315 @@
+.header {
+  height: 52px;
+  min-height: 52px;
+  max-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: #090D16;
+  border-bottom: 1px solid var(--cm-border);
+  flex-shrink: 0;
+  z-index: 20;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Left Section ── */
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brandLogo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.brandIcon {
+  font-size: 16px;
+}
+
+.brandName {
+  font-family: var(--cm-font-heading);
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+  color: var(--cm-text-light);
+}
+
+.badge1v1 {
+  font-family: var(--cm-font-mono);
+  font-size: 9px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(244, 63, 94, 0.2));
+  color: var(--cm-player-blue);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.drawerToggleBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--cm-border);
+  background: var(--cm-surface);
+  color: var(--cm-muted);
+  font-family: var(--cm-font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.drawerToggleBtn:hover {
+  color: var(--cm-text-light);
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.drawerToggleActive {
+  color: var(--cm-player-blue) !important;
+  border-color: rgba(56, 189, 248, 0.4) !important;
+  background: var(--cm-player-blue-bg) !important;
+}
+
+/* ── HUD Center ── */
+.hudCenter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.playerPillBlue {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 12px 4px 6px;
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.1);
+}
+
+.avatarBlue {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--cm-player-blue-deep);
+  color: #ffffff;
+  font-family: var(--cm-font-heading);
+  font-size: 9px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+}
+
+.playerMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.playerName {
+  font-family: var(--cm-font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--cm-text-light);
+  line-height: 1.1;
+}
+
+.passedText {
+  font-family: var(--cm-font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--cm-player-blue);
+}
+
+.scorePill {
+  font-family: var(--cm-font-mono);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--cm-player-blue);
+  background: rgba(56, 189, 248, 0.15);
+  padding: 2px 8px;
+  border-radius: 10px;
+  min-width: 28px;
+  text-align: center;
+}
+
+/* Timer */
+.timerDisplay {
+  padding: 4px 12px;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 8px;
+  border: 1px solid var(--cm-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timerText {
+  font-family: var(--cm-font-mono);
+  font-size: 16px;
+  font-weight: 800;
+  color: #f8fafc;
+  letter-spacing: 1px;
+  animation: cm-glow-breathe 4s infinite ease-in-out;
+}
+
+.vsBadge {
+  font-family: var(--cm-font-heading);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--cm-muted);
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
+/* Player 2 Pill (Red) */
+.playerPillRed {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 6px 4px 12px;
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  box-shadow: 0 0 12px rgba(244, 63, 94, 0.1);
+}
+
+.avatarRed {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--cm-player-red-deep);
+  color: #ffffff;
+  font-family: var(--cm-font-heading);
+  font-size: 9px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+}
+
+.playerMetaRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.passedTextRed {
+  font-family: var(--cm-font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--cm-player-red);
+}
+
+.scorePillRed {
+  font-family: var(--cm-font-mono);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--cm-player-red);
+  background: rgba(244, 63, 94, 0.15);
+  padding: 2px 8px;
+  border-radius: 10px;
+  min-width: 28px;
+  text-align: center;
+}
+
+.scoreBump {
+  animation: cm-score-bump 0.3s ease;
+}
+
+/* ── Right Section ── */
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.roomPill {
+  font-family: var(--cm-font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--cm-border);
+  color: var(--cm-muted);
+}
+
+.actionIconBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid var(--cm-border);
+  background: var(--cm-surface);
+  color: var(--cm-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.actionIconBtn:hover {
+  color: var(--cm-text-light);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.actionIconActive {
+  color: var(--cm-player-blue) !important;
+  border-color: rgba(56, 189, 248, 0.4) !important;
+  background: var(--cm-player-blue-bg) !important;
+}
+
+.exitBtn {
+  font-family: var(--cm-font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  background: rgba(244, 63, 94, 0.08);
+  color: var(--cm-player-red);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.exitBtn:hover {
+  background: rgba(244, 63, 94, 0.2);
+  border-color: var(--cm-player-red);
+}
+
+.reconnectBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 20px;
+  background: rgba(244, 63, 94, 0.15);
+  border-bottom: 1px solid rgba(244, 63, 94, 0.3);
+  font-family: var(--cm-font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cm-danger);
+  animation: cm-fadeIn 0.3s ease both;
+}
+
+.reconnectDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cm-danger);
+  animation: cm-pulse 1s infinite ease-in-out;
+}

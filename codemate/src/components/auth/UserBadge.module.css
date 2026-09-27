@@ -1,0 +1,62 @@
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--cm-border);
+  border-radius: 12px;
+  background: var(--cm-surface);
+}
+
+.avatarImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--cm-accent);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.avatarInitials {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--cm-accent);
+  background: var(--cm-accent-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--cm-font-heading);
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--cm-accent);
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-family: var(--cm-font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cm-text-light);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.email {
+  font-family: var(--cm-font-mono);
+  font-size: 11px;
+  color: var(--cm-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.signOutBtn {
+  flex-shrink: 0;
+}
